@@ -16,9 +16,11 @@ struct CategoriesView: View {
                         ScrollView {
                             RecipeList(recipes: Recipe.all.filter {$0.category == category.rawValue})
                         }
+                       .navigationTitle(category.rawValue + "s")
                     } label: {
                         Text(category.rawValue + "s")
                     }
+                    .navigationTitle("Categories")
 
                     
                 }

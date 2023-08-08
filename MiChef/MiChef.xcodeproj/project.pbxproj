@@ -24,6 +24,7 @@
 		531D76182A82ED1D002C82D4 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76172A82ED1D002C82D4 /* RecipeCard.swift */; };
 		531D761A2A82F45C002C82D4 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76192A82F45C002C82D4 /* RecipeList.swift */; };
 		531D761C2A82F814002C82D4 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D761B2A82F814002C82D4 /* RecipeView.swift */; };
+		531D761E2A8304C0002C82D4 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D761D2A8304C0002C82D4 /* AddRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		531D76172A82ED1D002C82D4 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 		531D76192A82F45C002C82D4 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		531D761B2A82F814002C82D4 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		531D761D2A8304C0002C82D4 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				531D761B2A82F814002C82D4 /* RecipeView.swift */,
+				531D761D2A8304C0002C82D4 /* AddRecipeView.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				531D760A2A82E371002C82D4 /* HomeView.swift in Sources */,
 				531D76182A82ED1D002C82D4 /* RecipeCard.swift in Sources */,
+				531D761E2A8304C0002C82D4 /* AddRecipeView.swift in Sources */,
 				531D76122A82E3B2002C82D4 /* CategoriesView.swift in Sources */,
 				531D760C2A82E38E002C82D4 /* SettingsView.swift in Sources */,
 				531D76142A82E4C7002C82D4 /* TabBar.swift in Sources */,
