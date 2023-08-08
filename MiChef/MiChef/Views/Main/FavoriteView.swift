@@ -13,6 +13,7 @@ struct FavoriteView: View {
             Text("Favorites")
                 .navigationTitle("No Favorites Added")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

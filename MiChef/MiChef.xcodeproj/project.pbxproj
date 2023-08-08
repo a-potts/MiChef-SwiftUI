@@ -20,6 +20,7 @@
 		531D76102A82E3A9002C82D4 /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D760F2A82E3A9002C82D4 /* NewRecipeView.swift */; };
 		531D76122A82E3B2002C82D4 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76112A82E3B2002C82D4 /* CategoriesView.swift */; };
 		531D76142A82E4C7002C82D4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76132A82E4C7002C82D4 /* TabBar.swift */; };
+		531D76162A82E8EB002C82D4 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76152A82E8EB002C82D4 /* RecipeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		531D760F2A82E3A9002C82D4 /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		531D76112A82E3B2002C82D4 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		531D76132A82E4C7002C82D4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		531D76152A82E8EB002C82D4 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		531D76052A82E2E1002C82D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				531D76152A82E8EB002C82D4 /* RecipeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				531D76102A82E3A9002C82D4 /* NewRecipeView.swift in Sources */,
 				531D760E2A82E399002C82D4 /* FavoriteView.swift in Sources */,
 				531D75DA2A82E210002C82D4 /* MiChefApp.swift in Sources */,
+				531D76162A82E8EB002C82D4 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

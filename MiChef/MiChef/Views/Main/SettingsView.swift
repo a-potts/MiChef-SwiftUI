@@ -13,6 +13,7 @@ struct SettingsView: View {
             Text("Settings")
                 .navigationTitle("v1.1.0")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

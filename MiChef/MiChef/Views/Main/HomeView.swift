@@ -10,9 +10,14 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            Text("My Recipes!")
-                .navigationTitle("My Recipes")
+            
+            // Use List to iterate through an array, displaying each item in a list
+            List(Recipe.all) { recipe in
+                Text(recipe.name)
+                    .navigationTitle("My Recipes")
+            }
         }
+        .navigationViewStyle(.stack)
     }
 }
 
