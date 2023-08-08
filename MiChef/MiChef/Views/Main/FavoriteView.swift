@@ -11,7 +11,7 @@ struct FavoriteView: View {
     var body: some View {
         NavigationView {
             Text("Favorites")
-                .navigationTitle("Favorites")
+                .navigationTitle("No Favorites Added")
         }
     }
 }
