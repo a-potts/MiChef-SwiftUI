@@ -22,6 +22,7 @@
 		531D76142A82E4C7002C82D4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76132A82E4C7002C82D4 /* TabBar.swift */; };
 		531D76162A82E8EB002C82D4 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76152A82E8EB002C82D4 /* RecipeModel.swift */; };
 		531D76182A82ED1D002C82D4 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76172A82ED1D002C82D4 /* RecipeCard.swift */; };
+		531D761A2A82F45C002C82D4 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D76192A82F45C002C82D4 /* RecipeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		531D76132A82E4C7002C82D4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		531D76152A82E8EB002C82D4 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		531D76172A82ED1D002C82D4 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
+		531D76192A82F45C002C82D4 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				531D76172A82ED1D002C82D4 /* RecipeCard.swift */,
+				531D76192A82F45C002C82D4 /* RecipeList.swift */,
 			);
 			path = Componets;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				531D760C2A82E38E002C82D4 /* SettingsView.swift in Sources */,
 				531D76142A82E4C7002C82D4 /* TabBar.swift in Sources */,
 				531D75DC2A82E210002C82D4 /* ContentView.swift in Sources */,
+				531D761A2A82F45C002C82D4 /* RecipeList.swift in Sources */,
 				531D76102A82E3A9002C82D4 /* NewRecipeView.swift in Sources */,
 				531D760E2A82E399002C82D4 /* FavoriteView.swift in Sources */,
 				531D75DA2A82E210002C82D4 /* MiChefApp.swift in Sources */,
