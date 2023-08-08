@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		531D75DA2A82E210002C82D4 /* MiChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D75D92A82E210002C82D4 /* MiChefApp.swift */; };
+		531D75DC2A82E210002C82D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D75DB2A82E210002C82D4 /* ContentView.swift */; };
+		531D75DE2A82E212002C82D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531D75DD2A82E212002C82D4 /* Assets.xcassets */; };
+		531D75E12A82E212002C82D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531D75E02A82E212002C82D4 /* Preview Assets.xcassets */; };
+		531D75EB2A82E212002C82D4 /* MiChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D75EA2A82E212002C82D4 /* MiChefTests.swift */; };
+		531D75F52A82E212002C82D4 /* MiChefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D75F42A82E212002C82D4 /* MiChefUITests.swift */; };
+		531D75F72A82E212002C82D4 /* MiChefUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D75F62A82E212002C82D4 /* MiChefUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		531D75E72A82E212002C82D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531D75CE2A82E210002C82D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 531D75D52A82E210002C82D4;
+			remoteInfo = MiChef;
+		};
+		531D75F12A82E212002C82D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 531D75CE2A82E210002C82D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 531D75D52A82E210002C82D4;
+			remoteInfo = MiChef;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		531D75D62A82E210002C82D4 /* MiChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D75D92A82E210002C82D4 /* MiChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiChefApp.swift; sourceTree = "<group>"; };
+		531D75DB2A82E210002C82D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		531D75DD2A82E212002C82D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		531D75E02A82E212002C82D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		531D75E62A82E212002C82D4 /* MiChefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiChefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D75EA2A82E212002C82D4 /* MiChefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiChefTests.swift; sourceTree = "<group>"; };
+		531D75F02A82E212002C82D4 /* MiChefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiChefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		531D75F42A82E212002C82D4 /* MiChefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiChefUITests.swift; sourceTree = "<group>"; };
+		531D75F62A82E212002C82D4 /* MiChefUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiChefUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		531D75D32A82E210002C82D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75E32A82E212002C82D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75ED2A82E212002C82D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		531D75CD2A82E210002C82D4 = {
+			isa = PBXGroup;
+			children = (
+				531D75D82A82E210002C82D4 /* MiChef */,
+				531D75E92A82E212002C82D4 /* MiChefTests */,
+				531D75F32A82E212002C82D4 /* MiChefUITests */,
+				531D75D72A82E210002C82D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		531D75D72A82E210002C82D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				531D75D62A82E210002C82D4 /* MiChef.app */,
+				531D75E62A82E212002C82D4 /* MiChefTests.xctest */,
+				531D75F02A82E212002C82D4 /* MiChefUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		531D75D82A82E210002C82D4 /* MiChef */ = {
+			isa = PBXGroup;
+			children = (
+				531D75D92A82E210002C82D4 /* MiChefApp.swift */,
+				531D75DB2A82E210002C82D4 /* ContentView.swift */,
+				531D75DD2A82E212002C82D4 /* Assets.xcassets */,
+				531D75DF2A82E212002C82D4 /* Preview Content */,
+			);
+			path = MiChef;
+			sourceTree = "<group>";
+		};
+		531D75DF2A82E212002C82D4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				531D75E02A82E212002C82D4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		531D75E92A82E212002C82D4 /* MiChefTests */ = {
+			isa = PBXGroup;
+			children = (
+				531D75EA2A82E212002C82D4 /* MiChefTests.swift */,
+			);
+			path = MiChefTests;
+			sourceTree = "<group>";
+		};
+		531D75F32A82E212002C82D4 /* MiChefUITests */ = {
+			isa = PBXGroup;
+			children = (
+				531D75F42A82E212002C82D4 /* MiChefUITests.swift */,
+				531D75F62A82E212002C82D4 /* MiChefUITestsLaunchTests.swift */,
+			);
+			path = MiChefUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		531D75D52A82E210002C82D4 /* MiChef */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D75FA2A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChef" */;
+			buildPhases = (
+				531D75D22A82E210002C82D4 /* Sources */,
+				531D75D32A82E210002C82D4 /* Frameworks */,
+				531D75D42A82E210002C82D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiChef;
+			productName = MiChef;
+			productReference = 531D75D62A82E210002C82D4 /* MiChef.app */;
+			productType = "com.apple.product-type.application";
+		};
+		531D75E52A82E212002C82D4 /* MiChefTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D75FD2A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChefTests" */;
+			buildPhases = (
+				531D75E22A82E212002C82D4 /* Sources */,
+				531D75E32A82E212002C82D4 /* Frameworks */,
+				531D75E42A82E212002C82D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				531D75E82A82E212002C82D4 /* PBXTargetDependency */,
+			);
+			name = MiChefTests;
+			productName = MiChefTests;
+			productReference = 531D75E62A82E212002C82D4 /* MiChefTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		531D75EF2A82E212002C82D4 /* MiChefUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 531D76002A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChefUITests" */;
+			buildPhases = (
+				531D75EC2A82E212002C82D4 /* Sources */,
+				531D75ED2A82E212002C82D4 /* Frameworks */,
+				531D75EE2A82E212002C82D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				531D75F22A82E212002C82D4 /* PBXTargetDependency */,
+			);
+			name = MiChefUITests;
+			productName = MiChefUITests;
+			productReference = 531D75F02A82E212002C82D4 /* MiChefUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		531D75CE2A82E210002C82D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					531D75D52A82E210002C82D4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					531D75E52A82E212002C82D4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 531D75D52A82E210002C82D4;
+					};
+					531D75EF2A82E212002C82D4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 531D75D52A82E210002C82D4;
+					};
+				};
+			};
+			buildConfigurationList = 531D75D12A82E210002C82D4 /* Build configuration list for PBXProject "MiChef" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 531D75CD2A82E210002C82D4;
+			productRefGroup = 531D75D72A82E210002C82D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				531D75D52A82E210002C82D4 /* MiChef */,
+				531D75E52A82E212002C82D4 /* MiChefTests */,
+				531D75EF2A82E212002C82D4 /* MiChefUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		531D75D42A82E210002C82D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D75E12A82E212002C82D4 /* Preview Assets.xcassets in Resources */,
+				531D75DE2A82E212002C82D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75E42A82E212002C82D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75EE2A82E212002C82D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		531D75D22A82E210002C82D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D75DC2A82E210002C82D4 /* ContentView.swift in Sources */,
+				531D75DA2A82E210002C82D4 /* MiChefApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75E22A82E212002C82D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D75EB2A82E212002C82D4 /* MiChefTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D75EC2A82E212002C82D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531D75F72A82E212002C82D4 /* MiChefUITestsLaunchTests.swift in Sources */,
+				531D75F52A82E212002C82D4 /* MiChefUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		531D75E82A82E212002C82D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 531D75D52A82E210002C82D4 /* MiChef */;
+			targetProxy = 531D75E72A82E212002C82D4 /* PBXContainerItemProxy */;
+		};
+		531D75F22A82E212002C82D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 531D75D52A82E210002C82D4 /* MiChef */;
+			targetProxy = 531D75F12A82E212002C82D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		531D75F82A82E212002C82D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		531D75F92A82E212002C82D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		531D75FB2A82E212002C82D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiChef/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		531D75FC2A82E212002C82D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiChef/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChef;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		531D75FE2A82E212002C82D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChefTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiChef.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiChef";
+			};
+			name = Debug;
+		};
+		531D75FF2A82E212002C82D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChefTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiChef.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiChef";
+			};
+			name = Release;
+		};
+		531D76012A82E212002C82D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChefUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiChef;
+			};
+			name = Debug;
+		};
+		531D76022A82E212002C82D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FH.MiChefUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiChef;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		531D75D12A82E210002C82D4 /* Build configuration list for PBXProject "MiChef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D75F82A82E212002C82D4 /* Debug */,
+				531D75F92A82E212002C82D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D75FA2A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChef" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D75FB2A82E212002C82D4 /* Debug */,
+				531D75FC2A82E212002C82D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D75FD2A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChefTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D75FE2A82E212002C82D4 /* Debug */,
+				531D75FF2A82E212002C82D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		531D76002A82E212002C82D4 /* Build configuration list for PBXNativeTarget "MiChefUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				531D76012A82E212002C82D4 /* Debug */,
+				531D76022A82E212002C82D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 531D75CE2A82E210002C82D4 /* Project object */;
+}
