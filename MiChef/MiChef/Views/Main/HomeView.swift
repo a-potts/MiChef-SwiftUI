@@ -12,10 +12,15 @@ struct HomeView: View {
         NavigationView {
             
             // Use List to iterate through an array, displaying each item in a list
-            List(Recipe.all) { recipe in
-                Text(recipe.name)
-                    .navigationTitle("My Recipes")
+//            List(Recipe.all) { recipe in
+//                Text(recipe.name)
+//                    .navigationTitle("My Recipes")
+//            }
+            
+            ScrollView {
+                RecipeList(recipes: Recipe.all)
             }
+            .navigationTitle("My Recipes")
         }
         .navigationViewStyle(.stack)
     }
