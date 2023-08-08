@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum Category: String {
+enum Category: String, CaseIterable, Identifiable {
+    var id: String  {self.rawValue}
+    //This property Id is going to uniquely identify each case of the enum
     case breakfast = "Breakfast"
     case soup = "Soup"
     case salad = "Salad"
@@ -15,7 +17,7 @@ enum Category: String {
     case main = "Main"
     case side = "Side"
     case dessert  = "Dessert"
-    case snack = "Snack "
+    case snack = "Snack"
     case drink = "Drink"
 }
 
