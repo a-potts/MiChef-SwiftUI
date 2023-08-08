@@ -16,6 +16,8 @@ struct AddRecipeView: View {
     @State private var ingredients: String = ""
     @State private var directions: String = ""
 
+    //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
@@ -53,7 +55,9 @@ struct AddRecipeView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
+                        //MARK: BUTTON ACTION
                         //Leave Action Empty for now
+                        dismiss()
                     } label: {
                         Label("Cancel", systemImage: "xmark")
                             .labelStyle(.iconOnly)
@@ -68,6 +72,7 @@ struct AddRecipeView: View {
                         Label("Done", systemImage: "checkmark")
                             .labelStyle(.iconOnly)
                     }
+                    .disabled(name.isEmpty)
 
                 }
             })
