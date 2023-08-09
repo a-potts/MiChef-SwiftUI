@@ -59,8 +59,7 @@ struct AddRecipeView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        //MARK: BUTTON ACTION
-                        //Leave Action Empty for now
+                       
                         dismiss()
                     } label: {
                         Label("Cancel", systemImage: "xmark")
@@ -74,6 +73,7 @@ struct AddRecipeView: View {
                         
                         Button {
                             //Leave Action Empty for now
+                            saveRecipe()
                             navigateToRecipe = true
                         } label: {
                             Label("Done", systemImage: "checkmark")
@@ -97,5 +97,25 @@ struct AddRecipeView: View {
 struct AddRecipeView_Previews: PreviewProvider {
     static var previews: some View {
         AddRecipeView()
+    }
+}
+
+
+extension AddRecipeView {
+    
+    //MARK: Save Recipe Function
+    private func saveRecipe(){
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        
+        let datePublish = dateFormatter.string(from: now)
+        print(datePublish)
+        
+        let recipe = Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: "")
+        print("Recipe Name \(recipe.name)")
+        
+        recipesVM.addRecipe(recipe: recipe)
     }
 }

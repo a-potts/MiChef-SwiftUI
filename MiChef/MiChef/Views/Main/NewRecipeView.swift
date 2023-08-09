@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct NewRecipeView: View {
-    @State private var showAddRecipe: Bool = false
+    @State private var showAddRecipe = false
     
     var body: some View {
         NavigationView {
             Button("Add Recipe Manually") {
-                showAddRecipe.toggle()
+                showAddRecipe = true
             }
                 .navigationTitle("New Recipe")
         }
