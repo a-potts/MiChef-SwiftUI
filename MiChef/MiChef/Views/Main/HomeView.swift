@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    // Environment Object suggests that the observable object was supplied by the parent view
+    @EnvironmentObject var recipesVM: RecipeViewModel
+    
     var body: some View {
         NavigationView {
             
@@ -18,7 +21,8 @@ struct HomeView: View {
 //            }
             
             ScrollView {
-                RecipeList(recipes: Recipe.all)
+                //MARK: View Model handling the data
+                RecipeList(recipes: recipesVM.recipes)
             }
             .navigationTitle("My Recipes")
         }
@@ -29,5 +33,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(RecipeViewModel())
     }
 }

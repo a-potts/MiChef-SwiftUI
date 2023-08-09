@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    @EnvironmentObject var recipesVM: RecipeViewModel
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(Category.allCases) { category in
                     NavigationLink {
                         ScrollView {
-                            RecipeList(recipes: Recipe.all.filter {$0.category == category.rawValue})
+                            RecipeList(recipes: recipesVM.recipes.filter {$0.category == category.rawValue})
                         }
                        .navigationTitle(category.rawValue + "s")
                     } label: {
@@ -33,5 +35,6 @@ struct CategoriesView: View {
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
         CategoriesView()
+            .environmentObject(RecipeViewModel())
     }
 }

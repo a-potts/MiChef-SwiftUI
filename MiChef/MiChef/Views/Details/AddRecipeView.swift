@@ -17,6 +17,8 @@ struct AddRecipeView: View {
     @State private var directions: String = ""
     
     @State private var navigateToRecipe: Bool = false
+    
+    @EnvironmentObject var recipesVM: RecipeViewModel
 
     //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
     @Environment(\.dismiss) var dismiss
@@ -68,7 +70,7 @@ struct AddRecipeView: View {
                 }
                 
                 ToolbarItem {
-                    NavigationLink(destination: RecipeView(recipe: Recipe.all.sorted{ $0.datePublish > $1.datePublish }[0]), isActive: $navigateToRecipe) {
+                    NavigationLink(destination: RecipeView(recipe: recipesVM.recipes.sorted{ $0.datePublish > $1.datePublish }[0]), isActive: $navigateToRecipe) {
                         
                         Button {
                             //Leave Action Empty for now
