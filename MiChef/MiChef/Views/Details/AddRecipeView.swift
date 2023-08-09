@@ -15,6 +15,8 @@ struct AddRecipeView: View {
     @State private var description: String = ""
     @State private var ingredients: String = ""
     @State private var directions: String = ""
+    
+    @State private var navigateToRecipe: Bool = false
 
     //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
     @Environment(\.dismiss) var dismiss
@@ -66,13 +68,20 @@ struct AddRecipeView: View {
                 }
                 
                 ToolbarItem {
-                    Button {
-                        //Leave Action Empty for now
-                    } label: {
-                        Label("Done", systemImage: "checkmark")
-                            .labelStyle(.iconOnly)
+                    NavigationLink(destination: RecipeView(recipe: Recipe.all.sorted{ $0.datePublish > $1.datePublish }[0]), isActive: $navigateToRecipe) {
+                        
+                        Button {
+                            //Leave Action Empty for now
+                            navigateToRecipe = true
+                        } label: {
+                            Label("Done", systemImage: "checkmark")
+                                .labelStyle(.iconOnly)
+                        }
                     }
+                    .navigationBarBackButtonHidden(true)
                     .disabled(name.isEmpty)
+
+                   
 
                 }
             })
