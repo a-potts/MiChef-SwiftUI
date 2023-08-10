@@ -35,6 +35,8 @@
 		531D76352A83FA77002C82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 531D76342A83FA76002C82D4 /* GoogleService-Info.plist */; };
 		531D76362A83FA77002C82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 531D76342A83FA76002C82D4 /* GoogleService-Info.plist */; };
 		531D76372A83FA77002C82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 531D76342A83FA76002C82D4 /* GoogleService-Info.plist */; };
+		53D9B34F2A8500FD00F63689 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B34E2A8500FD00F63689 /* FirebaseDatabase */; };
+		53D9B3512A85233E00F63689 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D9B3512A85233E00F63689 /* FirebaseFirestoreSwift in Frameworks */,
 				531D762B2A83E952002C82D4 /* FirebaseAnalyticsSwift in Frameworks */,
 				531D762D2A83E952002C82D4 /* FirebaseAuth in Frameworks */,
+				53D9B34F2A8500FD00F63689 /* FirebaseDatabase in Frameworks */,
 				531D76292A83E952002C82D4 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +122,7 @@
 				531D75E92A82E212002C82D4 /* MiChefTests */,
 				531D75F32A82E212002C82D4 /* MiChefUITests */,
 				531D75D72A82E210002C82D4 /* Products */,
+				53D9B34D2A8500FD00F63689 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +236,13 @@
 			path = Componets;
 			sourceTree = "<group>";
 		};
+		53D9B34D2A8500FD00F63689 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +263,8 @@
 				531D76282A83E952002C82D4 /* FirebaseAnalytics */,
 				531D762A2A83E952002C82D4 /* FirebaseAnalyticsSwift */,
 				531D762C2A83E952002C82D4 /* FirebaseAuth */,
+				53D9B34E2A8500FD00F63689 /* FirebaseDatabase */,
+				53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */,
 			);
 			productName = MiChef;
 			productReference = 531D75D62A82E210002C82D4 /* MiChef.app */;
@@ -734,6 +748,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 531D76272A83E952002C82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		53D9B34E2A8500FD00F63689 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 531D76272A83E952002C82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 531D76272A83E952002C82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

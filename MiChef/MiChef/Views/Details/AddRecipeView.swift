@@ -6,8 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseDatabase
+import FirebaseFirestore
+
 
 struct AddRecipeView: View {
+    
+
     
     //These states are used within this view only, apple suggests they must be private
     @State private var name: String = ""
@@ -19,6 +25,7 @@ struct AddRecipeView: View {
     @State private var navigateToRecipe: Bool = false
     
     @EnvironmentObject var recipesVM: RecipeViewModel
+    
 
     //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
     @Environment(\.dismiss) var dismiss
@@ -69,11 +76,16 @@ struct AddRecipeView: View {
                 }
                 
                 ToolbarItem {
+                    
+                    
                     NavigationLink(destination: RecipeView(recipe: recipesVM.recipes.sorted{ $0.datePublish > $1.datePublish }[0]), isActive: $navigateToRecipe) {
                         
                         Button {
+                            //MARK: SAVE RECIPE
                             //Leave Action Empty for now
                             saveRecipe()
+                            
+                            
                             navigateToRecipe = true
                         } label: {
                             Label("Done", systemImage: "checkmark")
@@ -92,18 +104,10 @@ struct AddRecipeView: View {
         }
         .navigationViewStyle(.stack)
     }
-}
-
-struct AddRecipeView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddRecipeView()
-    }
-}
-
-
-extension AddRecipeView {
     
-    //MARK: Save Recipe Function
+    
+    
+    
     private func saveRecipe(){
         let now = Date()
         let dateFormatter = DateFormatter()
@@ -113,9 +117,55 @@ extension AddRecipeView {
         let datePublish = dateFormatter.string(from: now)
         print(datePublish)
         
-        let recipe = Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: "")
-        print("Recipe Name \(recipe.name)")
+        let recipe: [String : Any] = [
+            "name": name,
+            "image": "",
+            "description": description,
+            "ingredients": ingredients,
+            "directions": directions,
+            "category": selectedCategory.rawValue,
+            "datePublish": datePublish,
+            "url": ""
+            ]
         
-        recipesVM.addRecipe(recipe: recipe)
+        
+       // print("Recipe Name \(recipe.name)")
+        
+       
+        //MARK: ADD Firebase Functionality
+       // var db = Firestore.firestore()
+          
+        
+            
+       // var ref: DatabaseReference = Database.database().reference()
+        
+        let db = Firestore.firestore().collection("Recipes")
+     
+        
+      //  ref.setValue(recipe)
+        
+        db.addDocument(data: recipe)
+        
+        
+          
+        
+      
+        
+       // recipesVM.addRecipe(recipe: recipe)
+    }
+    
+    
+    
+}
+
+struct AddRecipeView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddRecipeView()
     }
 }
+
+
+    
+    
+ 
+

@@ -21,7 +21,7 @@ enum Category: String, CaseIterable, Identifiable {
     case drink = "Drink"
 }
 
-struct Recipe: Identifiable {
+struct Recipe: Identifiable, Codable {
     let id = UUID()
     let name: String
     let image: String

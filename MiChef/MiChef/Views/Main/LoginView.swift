@@ -33,12 +33,15 @@ struct LoginView: View {
             //Becasue this view now becomes the ancestor of RecipesViewModel, we need to add it to environment object
             HomeView()
                 .environmentObject(RecipeViewModel())
+                
         } else {
             content
         }
     }
     
     var content: some View {
+        
+        
         Form {
             VStack {
                 Section  {
@@ -139,14 +142,14 @@ struct LoginView: View {
         .frame(width: 350, height: 500, alignment: .center)
         //This removes the form bg color
         .scrollContentBackground(.hidden)
-//        .onAppear() {
-//            Auth.auth().addStateDidChangeListener { auth, user in
-//                // if there is a user, toggle the boolean true
-//                if user != nil {
-//                    userIsLoggedIn.toggle()
-//                }
-//            }
-//        }
+        .onAppear() {
+            Auth.auth().addStateDidChangeListener { auth, user in
+                // if there is a user, toggle the boolean true
+                if user != nil {
+                    userIsLoggedIn.toggle()
+                }
+            }
+        }
     }
     
    
