@@ -24,9 +24,11 @@ struct MiChefApp: App {
         WindowGroup {
             LoginView()
                 .environmentObject(userVM)
-//            ContentView()
-//                .environmentObject(recipesViewModel)
+            
+           // ContentView()
+              //  .environmentObject(recipesViewModel)
             //this will allow any child of ContentView, to access the view model
         }
+     
     }
 }
