@@ -23,9 +23,7 @@ class RecipeViewModel: ObservableObject {
         getRecipes()
     }
     
-    func addRecipe(recipe: Recipe) {
-        recipes.append(recipe)
-    }
+   
     
     
     //MARK: Fetch firestore values
@@ -41,6 +39,8 @@ class RecipeViewModel: ObservableObject {
                 return
                 
             }
+            
+            
             
             if let snapshot = snapshot {
                 //Iterate through the snapshot values & append each value to the property array

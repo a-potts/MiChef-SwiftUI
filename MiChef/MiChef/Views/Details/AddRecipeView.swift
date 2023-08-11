@@ -77,15 +77,18 @@ struct AddRecipeView: View {
                 
                 ToolbarItem {
                     
+                    //destination is the RecipeView whos recipe is the most recent of the list
                     
-                    NavigationLink(destination: RecipeView(recipe: recipesVM.recipes.sorted{ $0.datePublish > $1.datePublish }[0]), isActive: $navigateToRecipe) {
+                    //Before I was using sort to compare the latest data entry by date, when connected to firebase this result prints correclty but returns incorrectly in the app. I created a work around below by creating an object on the view for the user to see temporarily 
+                    NavigationLink(destination: RecipeView(recipe: Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: "", datePublish: "", url: "")), isActive: $navigateToRecipe) {
+                        
                         
                         Button {
                             //MARK: SAVE RECIPE
                             //Leave Action Empty for now
                             saveRecipe()
                             
-                            
+                            //isActive is so we know to only activate when done button is tapped - which is of type binding boolean
                             navigateToRecipe = true
                         } label: {
                             Label("Done", systemImage: "checkmark")
@@ -106,14 +109,13 @@ struct AddRecipeView: View {
     }
     
     
-    
+    //MARK: ADD Firebase Functionality
     
     private func saveRecipe(){
         let now = Date()
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "yyyy-mm-dd"
-        
+        dateFormatter.dateFormat = "MMM dd, yyyy 'at' hh:mm a"
         let datePublish = dateFormatter.string(from: now)
         print(datePublish)
         
@@ -128,8 +130,6 @@ struct AddRecipeView: View {
             "url": ""
             ]
         
-       
-        //MARK: ADD Firebase Functionality
                   
         let db = Firestore.firestore().collection("Recipes")
      
@@ -138,6 +138,10 @@ struct AddRecipeView: View {
         
           
       }
+    
+    
+    
+    
     
     
     
