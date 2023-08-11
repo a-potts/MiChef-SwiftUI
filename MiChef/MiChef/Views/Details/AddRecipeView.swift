@@ -128,31 +128,16 @@ struct AddRecipeView: View {
             "url": ""
             ]
         
-        
-       // print("Recipe Name \(recipe.name)")
-        
        
         //MARK: ADD Firebase Functionality
-       // var db = Firestore.firestore()
-          
-        
-            
-       // var ref: DatabaseReference = Database.database().reference()
-        
+                  
         let db = Firestore.firestore().collection("Recipes")
      
-        
-      //  ref.setValue(recipe)
-        
         db.addDocument(data: recipe)
         
         
           
-        
-      
-        
-       // recipesVM.addRecipe(recipe: recipe)
-    }
+      }
     
     
     

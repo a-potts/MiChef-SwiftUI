@@ -40,7 +40,7 @@ struct RecipeList: View {
 struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            RecipeList(recipes: Recipe.all)
+            RecipeView(recipe: RecipeViewModel().recipes[0])
         }
     }
 }
