@@ -70,8 +70,18 @@ struct RecipeView: View {
 }
 
 struct RecipeView_Previews: PreviewProvider {
+    //This is a trick to force data to the preview model
+    //Need to add this since we declared a insatce of the property above, it will have no value when the process reaches it so we must set one
+    //Declare a lazy static constant
+    static let recipesVM: RecipeViewModel = {
+     let recipesVM = RecipeViewModel()
+     recipesVM.recipes = recipeListPreviewData
+     return recipesVM
+    }()
+    
     static var previews: some View {
         RecipeView(recipe: RecipeViewModel().recipes[0])
+            .environmentObject(recipesVM)
     }
 }
 

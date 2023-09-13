@@ -22,11 +22,12 @@ struct MiChefApp: App {
     
     var body: some Scene {
         WindowGroup {
-          //  LoginView()
-            //    .environmentObject(userVM)
-            
-             ContentView()
+            LoginView()
+                .environmentObject(userVM)
                 .environmentObject(recipesViewModel)
+            
+//             ContentView()
+//                .environmentObject(recipesViewModel)
             //this will allow any child of ContentView, to access the view model
         }
      

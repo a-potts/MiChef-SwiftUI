@@ -79,14 +79,20 @@ struct AddRecipeView: View {
                     
                     //destination is the RecipeView whos recipe is the most recent of the list
                     
-                    //Before I was using sort to compare the latest data entry by date, when connected to firebase this result prints correclty but returns incorrectly in the app. I created a work around below by creating an object on the view for the user to see temporarily 
+                    //Before I was using sort to compare the latest data entry by date, when connected to firebase this result prints correclty but returns incorrectly in the app. I created a work around below by creating an object on the view for the user to see temporarily
                     NavigationLink(destination: RecipeView(recipe: Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: "", datePublish: "", url: "")), isActive: $navigateToRecipe) {
                         
                         
                         Button {
                             //MARK: SAVE RECIPE
                             //Leave Action Empty for now
+//                            updateArray(recipe: Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: "", datePublish: "", url: ""))
+//
                             saveRecipe()
+                            
+                          
+                            
+                            
                             
                             //isActive is so we know to only activate when done button is tapped - which is of type binding boolean
                             navigateToRecipe = true
@@ -136,9 +142,7 @@ struct AddRecipeView: View {
         db.addDocument(data: recipe)
         
         
-          
       }
-    
     
     
     
@@ -148,8 +152,18 @@ struct AddRecipeView: View {
 }
 
 struct AddRecipeView_Previews: PreviewProvider {
+    //This is a trick to force data to the preview model
+    //Need to add this since we declared a insatce of the property above, it will have no value when the process reaches it so we must set one
+    //Declare a lazy static constant
+    static let recipesVM: RecipeViewModel = {
+     let recipesVM = RecipeViewModel()
+     recipesVM.recipes = recipeListPreviewData
+     return recipesVM
+    }()
+    
     static var previews: some View {
         AddRecipeView()
+            .environmentObject(recipesVM)
     }
 }
 

@@ -14,7 +14,7 @@ import FirebaseFirestore
 class RecipeViewModel: ObservableObject {
     
     //announces to subscribers when values change
-    @Published private(set) var recipes: [Recipe] = []
+    @Published var recipes: [Recipe] = []
     //private set only allow this class to update the values
     
    
@@ -66,6 +66,7 @@ class RecipeViewModel: ObservableObject {
             
         }
     }
+    
     
     
 }
