@@ -50,29 +50,27 @@ struct LoginView: View {
         
         NavigationView {
             ZStack {
-                Color.red
+                Color.blue
                     .ignoresSafeArea()
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white.opacity(0.15))
-                Circle()
-                    .scale(1.35)
-                    .foregroundColor(.white)
+               
                 
                 VStack {
                     Text(viewTitle)
                         .font(.largeTitle)
                         .bold()
                         .padding()
+                        .foregroundColor(.white)
                     TextField("Username", text: $name)
                         .padding()
-                        .frame(width: 300, height: 50) .background (Color.black.opacity (0.05))
-                        .cornerRadius(10)
+                        .frame(width: 300, height: 50) .background (Color.white.opacity (0.8))                        .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongUsername))
                     
                     SecureField("Password", text: $password)
                         .padding()
-                        .frame(width: 300, height: 50) .background (Color.black.opacity (0.05))
+                        .frame(width: 300, height: 50) .background (Color.white.opacity (0.8))
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
                     
@@ -127,6 +125,7 @@ struct LoginView: View {
                                     
                                     //MARK: Call to View Model if user logs in
                                 //    recipesVM.getExpenses()
+                                    recipesVM.getRecipes()
                                     
                                     if showingSheet == true { //if its on, turn it off
                                         showingSheet.toggle() // off
@@ -164,7 +163,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .bold()
                         .frame(width: 300, height: 50)
-                        .background (Color.red)
+                        .background (Color.blue)
                         .cornerRadius (10)
                         
                         
@@ -194,7 +193,7 @@ struct LoginView: View {
                             self.viewTitle = "Register"
                             
                         }
-                        .foregroundColor(Color.red)
+                        .foregroundColor(Color.white)
                         .bold()
                         
                     }
@@ -253,7 +252,7 @@ struct LoginView: View {
                             
                         }
                         .bold()
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.white)
                         
                     }
                  

@@ -23,7 +23,7 @@ class RecipeViewModel: ObservableObject {
    
     
     init() {
-        getRecipes()
+      //  getRecipes()
     }
     
    
@@ -46,6 +46,16 @@ class RecipeViewModel: ObservableObject {
                 print (error!.localizedDescription)
                 return
                 
+            }
+            
+            //Ensure there are no current recipes in the array before Loop iterates firebase snapshot to add to it
+            self.recipes.removeAll()
+            print("TRANSACTION SHEET COUNT HERE: \(self.recipes.count)")
+            
+            if self.recipes.count > 0 {
+                print("TRANSACTION SHEET COUNT ZERO: \(self.recipes.count)")
+
+                return
             }
             
             

@@ -85,9 +85,8 @@ struct AddRecipeView: View {
                         
                         Button {
                             //MARK: SAVE RECIPE
-                            //Leave Action Empty for now
-//                            updateArray(recipe: Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: "", datePublish: "", url: ""))
-//
+                           
+
                             saveRecipe()
                             
                           
@@ -147,6 +146,8 @@ struct AddRecipeView: View {
         
         
         db.addDocument(data: recipe)
+        
+        recipesVM.recipes.append(Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: ""))
         
         
       }
