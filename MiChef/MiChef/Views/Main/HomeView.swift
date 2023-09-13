@@ -10,21 +10,53 @@ import SwiftUI
 struct HomeView: View {
     // Environment Object suggests that the observable object was supplied by the parent view
     @EnvironmentObject var recipesVM: RecipeViewModel
-    
+    @EnvironmentObject var userVM: UserViewModel
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
         NavigationView {
             
-            // Use List to iterate through an array, displaying each item in a list
-//            List(Recipe.all) { recipe in
-//                Text(recipe.name)
-//                    .navigationTitle("My Recipes")
-//            }
+ 
+       
             
             ScrollView {
                 //MARK: View Model handling the data
                 RecipeList(recipes: recipesVM.recipes)
             }
             .navigationTitle("My Recipes")
+            .toolbar {
+                //MARK: Logout Icon
+                ToolbarItem(placement: .navigationBarLeading) {
+                    
+                
+                  
+                //MARK: SIGN OUT Button
+                   
+                        
+                    Button(action:  {
+                        print("logout pressed")
+                        userVM.signOut()
+                      //  transactionListsVM.transaction.removeAll() // Causes duplicates
+                        
+                        dismiss()
+                        
+                        
+                    }) {
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(Color.red, .primary)
+                            Text("Sign Out")
+                                .bold()
+                                .foregroundColor(.red)
+                        }
+                   
+                    
+                }
+            }
+            
+            
+           
+            
         }
         .navigationViewStyle(.stack)
     }

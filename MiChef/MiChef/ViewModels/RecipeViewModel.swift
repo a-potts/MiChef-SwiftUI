@@ -7,6 +7,9 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseAuth
+import Collections
+import Combine
 
 
 
@@ -29,10 +32,15 @@ class RecipeViewModel: ObservableObject {
     //MARK: Fetch firestore values
     func getRecipes(){
         
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("ERROR NO UUID")
+            return
+        }
+        
         let db = Firestore.firestore()
         
-        let docRef = db.collection("Recipes")
-        
+        let docRef = db.collection("users").document(uid).collection("Recipes")
+
         docRef.getDocuments { snapshot, error in
             guard error == nil else {
                 print (error!.localizedDescription)

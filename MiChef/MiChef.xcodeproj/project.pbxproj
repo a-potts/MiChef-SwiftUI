@@ -36,6 +36,9 @@
 		531D76362A83FA77002C82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 531D76342A83FA76002C82D4 /* GoogleService-Info.plist */; };
 		531D76372A83FA77002C82D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 531D76342A83FA76002C82D4 /* GoogleService-Info.plist */; };
 		5332F55C2AB1FB0700379400 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332F55B2AB1FB0700379400 /* PreviewData.swift */; };
+		5332F55F2AB2093A00379400 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F55E2AB2093A00379400 /* Collections */; };
+		5332F5612AB2093A00379400 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F5602AB2093A00379400 /* DequeModule */; };
+		5332F5632AB2093A00379400 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F5622AB2093A00379400 /* OrderedCollections */; };
 		53D9B34F2A8500FD00F63689 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B34E2A8500FD00F63689 /* FirebaseDatabase */; };
 		53D9B3512A85233E00F63689 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
@@ -92,10 +95,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5332F55F2AB2093A00379400 /* Collections in Frameworks */,
 				53D9B3512A85233E00F63689 /* FirebaseFirestoreSwift in Frameworks */,
 				531D762B2A83E952002C82D4 /* FirebaseAnalyticsSwift in Frameworks */,
+				5332F5612AB2093A00379400 /* DequeModule in Frameworks */,
 				531D762D2A83E952002C82D4 /* FirebaseAuth in Frameworks */,
 				53D9B34F2A8500FD00F63689 /* FirebaseDatabase in Frameworks */,
+				5332F5632AB2093A00379400 /* OrderedCollections in Frameworks */,
 				531D76292A83E952002C82D4 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +274,9 @@
 				531D762C2A83E952002C82D4 /* FirebaseAuth */,
 				53D9B34E2A8500FD00F63689 /* FirebaseDatabase */,
 				53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */,
+				5332F55E2AB2093A00379400 /* Collections */,
+				5332F5602AB2093A00379400 /* DequeModule */,
+				5332F5622AB2093A00379400 /* OrderedCollections */,
 			);
 			productName = MiChef;
 			productReference = 531D75D62A82E210002C82D4 /* MiChef.app */;
@@ -343,6 +352,7 @@
 			mainGroup = 531D75CD2A82E210002C82D4;
 			packageReferences = (
 				531D76272A83E952002C82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5332F55D2AB2093A00379400 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 531D75D72A82E210002C82D4 /* Products */;
 			projectDirPath = "";
@@ -735,6 +745,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		5332F55D2AB2093A00379400 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -752,6 +770,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 531D76272A83E952002C82D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		5332F55E2AB2093A00379400 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5332F55D2AB2093A00379400 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		5332F5602AB2093A00379400 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5332F55D2AB2093A00379400 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		5332F5622AB2093A00379400 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5332F55D2AB2093A00379400 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
 		};
 		53D9B34E2A8500FD00F63689 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -118,6 +118,9 @@ struct AddRecipeView: View {
     //MARK: ADD Firebase Functionality
     
     private func saveRecipe(){
+        
+        
+        
         let now = Date()
         let dateFormatter = DateFormatter()
         
@@ -136,9 +139,13 @@ struct AddRecipeView: View {
             "url": ""
             ]
         
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
                   
-        let db = Firestore.firestore().collection("Recipes")
-     
+        let db = Firestore.firestore().collection("users").document(uid).collection("Recipes")
+        
+        
         db.addDocument(data: recipe)
         
         
