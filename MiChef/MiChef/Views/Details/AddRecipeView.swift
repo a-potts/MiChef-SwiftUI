@@ -10,6 +10,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseFirestore
 import PhotosUI
+import FirebaseStorage
 
 struct AddRecipeView: View {
     
@@ -29,6 +30,8 @@ struct AddRecipeView: View {
     //MARK: Image Picker
     @State var selectedItems: [PhotosPickerItem] = []
     @State var data: Data?
+    @State var image: UIImage?
+    
 
     //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
     @Environment(\.dismiss) var dismiss
@@ -80,6 +83,8 @@ struct AddRecipeView: View {
                             case .success(let data):
                                 if let data = data {
                                     self.data = data
+                                    
+                                    self.image = UIImage(data: data)
                                 } else {
                                     print("Data is nil")
                                 }
@@ -89,8 +94,11 @@ struct AddRecipeView: View {
                         }
                     }
                     
-                    if let data = data, let uiimage = UIImage(data: data) {
-                        Image(uiImage: uiimage)
+                    if let data = data, let image = UIImage(data: data) {
+                        
+                        
+                        
+                        Image(uiImage: image)
                             .resizable()
                     }
                 }
@@ -149,7 +157,37 @@ struct AddRecipeView: View {
     }
     
     
-    //MARK: ADD Firebase Functionality
+    //MARK: ADD Firebase Functionality - REMOVE THIS FROM THE VIEW & PUT INTO VIEW MODEL
+    
+//    private func persistImage(){
+//
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            return
+//        }
+//
+//        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else {
+//            return
+//        }
+//
+//        let ref = Storage.storage().reference(withPath: uid)
+//        ref.putData(imageData, metadata: nil) { metadata, error in
+//            if let error = error {
+//                print("Fail Image")
+//                return
+//            }
+//
+////            //Fecth
+////            ref.downloadURL { url, error in
+////
+////                if let error = error {
+////                    print("Fail Image")
+////                    return
+////                }
+////            }
+//
+//
+//        }
+//    }
     
     private func saveRecipe(){
         
@@ -162,9 +200,47 @@ struct AddRecipeView: View {
         let datePublish = dateFormatter.string(from: now)
         print(datePublish)
         
+        
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        
+        //Image
+        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else {
+            return
+        }
+        
+        let ref = Storage.storage().reference(withPath: uid)
+        ref.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                print("Fail Image")
+                return
+            }
+        }
+        
+        //Image
+        var imageString: String = ""
+        
+        
+        //Fetch
+        ref.downloadURL { url, error in
+
+            if let error = error {
+                print("Fail Image fetch")
+                return
+            }
+
+            guard let urlString = url?.absoluteString else {return}
+            imageString = urlString
+        }
+        
+        
+        
         let recipe: [String : Any] = [
             "name": name,
-            "image": "",
+            "image": imageString,
             "description": description,
             "ingredients": ingredients,
             "directions": directions,
@@ -173,19 +249,20 @@ struct AddRecipeView: View {
             "url": ""
             ]
         
-        guard let uid = Auth.auth().currentUser?.uid else {
-            return
-        }
+       
+        
                   
         let db = Firestore.firestore().collection("users").document(uid).collection("Recipes")
         
         
         db.addDocument(data: recipe)
         
-        recipesVM.recipes.append(Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: ""))
+        recipesVM.recipes.append(Recipe(name: name, image: imageString, description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: ""))
         
         
       }
+    
+    
     
     
     
