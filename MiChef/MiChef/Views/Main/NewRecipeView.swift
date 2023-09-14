@@ -18,9 +18,9 @@ struct NewRecipeView: View {
                 .navigationTitle("New Recipe")
         }
         .navigationViewStyle(.stack)
-        .sheet(isPresented: $showAddRecipe) {
+        .fullScreenCover(isPresented: $showAddRecipe, content: {
             AddRecipeView()
-        }
+        })
     }
 }
 

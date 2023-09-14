@@ -39,6 +39,7 @@
 		5332F55F2AB2093A00379400 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F55E2AB2093A00379400 /* Collections */; };
 		5332F5612AB2093A00379400 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F5602AB2093A00379400 /* DequeModule */; };
 		5332F5632AB2093A00379400 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5332F5622AB2093A00379400 /* OrderedCollections */; };
+		5332F5672AB257FE00379400 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332F5662AB257FD00379400 /* ImagePicker.swift */; };
 		53D9B34F2A8500FD00F63689 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B34E2A8500FD00F63689 /* FirebaseDatabase */; };
 		53D9B3512A85233E00F63689 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53D9B3502A85233E00F63689 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		531D76322A83F27F002C82D4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		531D76342A83FA76002C82D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5332F55B2AB1FB0700379400 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		5332F5662AB257FD00379400 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		531D75DF2A82E212002C82D4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				5332F5662AB257FD00379400 /* ImagePicker.swift */,
 				5332F55B2AB1FB0700379400 /* PreviewData.swift */,
 				531D75E02A82E212002C82D4 /* Preview Assets.xcassets */,
 			);
@@ -406,6 +409,7 @@
 				531D76122A82E3B2002C82D4 /* CategoriesView.swift in Sources */,
 				531D760C2A82E38E002C82D4 /* SettingsView.swift in Sources */,
 				531D76142A82E4C7002C82D4 /* TabBar.swift in Sources */,
+				5332F5672AB257FE00379400 /* ImagePicker.swift in Sources */,
 				531D76332A83F27F002C82D4 /* UserViewModel.swift in Sources */,
 				531D75DC2A82E210002C82D4 /* ContentView.swift in Sources */,
 				531D761C2A82F814002C82D4 /* RecipeView.swift in Sources */,

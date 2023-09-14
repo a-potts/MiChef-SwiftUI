@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseDatabase
 import FirebaseFirestore
-
+import PhotosUI
 
 struct AddRecipeView: View {
     
@@ -26,6 +26,9 @@ struct AddRecipeView: View {
     
     @EnvironmentObject var recipesVM: RecipeViewModel
     
+    //MARK: Image Picker
+    @State var selectedItems: [PhotosPickerItem] = []
+    @State var data: Data?
 
     //swift ui provides a handler to dismiss a presentation, that handler is made availbe in the environment value
     @Environment(\.dismiss) var dismiss
@@ -61,6 +64,38 @@ struct AddRecipeView: View {
                     TextEditor(text: $directions)
                     
                 }
+                
+               
+                
+                Section(header: Text("Image") ) {
+                    PhotosPicker(selection: $selectedItems, maxSelectionCount: 1, matching: .images) {
+                        Text("Image Picker")
+                    }
+                    .onChange(of: selectedItems) { newValue in
+                        guard let item = selectedItems.first else {
+                            return
+                        }
+                        item.loadTransferable(type: Data.self) { result in
+                            switch result {
+                            case .success(let data):
+                                if let data = data {
+                                    self.data = data
+                                } else {
+                                    print("Data is nil")
+                                }
+                            case .failure(let failure):
+                                fatalError()
+                            }
+                        }
+                    }
+                    
+                    if let data = data, let uiimage = UIImage(data: data) {
+                        Image(uiImage: uiimage)
+                            .resizable()
+                    }
+                }
+                
+               
                 
             }
             .toolbar(content: {
