@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct RecipeList: View {
-    var recipes: [Recipe]
     
+    var recipes: [Recipe]
+        
     
     var body: some View {
         VStack {

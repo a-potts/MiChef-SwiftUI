@@ -30,25 +30,6 @@ struct HomeView: View {
                     
                 
                   
-                //MARK: SIGN OUT Button
-                   
-                        
-                    Button(action:  {
-                        print("logout pressed")
-                        userVM.signOut()
-                      //  transactionListsVM.transaction.removeAll() // Causes duplicates
-                        
-                        dismiss()
-                        
-                        
-                    }) {
-                            Image(systemName: "rectangle.portrait.and.arrow.right")
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(Color.red, .primary)
-                            Text("Sign Out")
-                                .bold()
-                                .foregroundColor(.red)
-                        }
                    
                     
                 }

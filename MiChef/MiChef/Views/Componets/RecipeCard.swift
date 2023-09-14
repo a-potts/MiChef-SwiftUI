@@ -12,7 +12,7 @@ struct RecipeCard: View {
    // var recipesVM: RecipeViewModel
     
     
-    
+    //This recipe needs to be one from storage 
     var recipe: Recipe
     
     

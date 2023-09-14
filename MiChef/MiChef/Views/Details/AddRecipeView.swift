@@ -123,15 +123,14 @@ struct AddRecipeView: View {
                     //destination is the RecipeView whos recipe is the most recent of the list
                     
                     //Before I was using sort to compare the latest data entry by date, when connected to firebase this result prints correclty but returns incorrectly in the app. I created a work around below by creating an object on the view for the user to see temporarily
-                    NavigationLink(destination: RecipeView(recipe: Recipe(name: name, image: "", description: description, ingredients: ingredients, directions: directions, category: "", datePublish: "", url: "")), isActive: $navigateToRecipe) {
-                        
+                                            
                         
                         Button {
                             //MARK: SAVE RECIPE
                            
 
                             saveRecipe()
-                            
+                            dismiss()
                           
                             
                             
@@ -142,7 +141,7 @@ struct AddRecipeView: View {
                             Label("Done", systemImage: "checkmark")
                                 .labelStyle(.iconOnly)
                         }
-                    }
+                    
                     .navigationBarBackButtonHidden(true)
                     .disabled(name.isEmpty)
 

@@ -27,10 +27,10 @@ struct TabBar: View {
                 }
 
             
-            FavoriteView()
-                .tabItem {
-                    Label("Favorte", systemImage: "star")
-                }
+//            FavoriteView()
+//                .tabItem {
+//                    Label("Favorte", systemImage: "star")
+//                }
 
             
             SettingsView()
