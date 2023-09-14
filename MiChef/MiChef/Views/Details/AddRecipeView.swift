@@ -212,52 +212,66 @@ struct AddRecipeView: View {
             return
         }
         
-        let ref = Storage.storage().reference(withPath: uid)
-        ref.putData(imageData, metadata: nil) { metadata, error in
-            if let error = error {
-                print("Fail Image")
-                return
-            }
-        }
+        let uuID = UUID()
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
         
         //Image
         var imageString: String = ""
         
-        
-        //Fetch
-        ref.downloadURL { url, error in
-
+        let ref = Storage.storage().reference(withPath: uid).child("images/\(name)")
+        ref.putData(imageData, metadata: metaData) { metadata, error in
             if let error = error {
-                print("Fail Image fetch")
+                print("Fail Image")
                 return
             }
+            // Fetch - Not working but doesnt matter? It does because I need this URL string to pass to my view card
+             ref.downloadURL { url, error in
 
-            guard let urlString = url?.absoluteString else {return}
-            imageString = urlString
+                 
+                 if let error = error {
+                     print("Fail Image fetch \(error)")
+                     return
+                 }
+
+                 guard let urlString = url?.absoluteString else {return}
+                 print("Success String \(urlString)")
+
+                 imageString = urlString
+                 
+                 
+                 let recipe: [String : Any] = [
+                     "name": name,
+                     "image": imageString,
+                     "description": description,
+                     "ingredients": ingredients,
+                     "directions": directions,
+                     "category": selectedCategory.rawValue,
+                     "datePublish": datePublish,
+                     "url": ""
+                     ]
+                 
+                
+                 
+                           
+                 let db = Firestore.firestore().collection("users").document(uid).collection("Recipes")
+                 
+                 
+                 db.addDocument(data: recipe)
+                 
+                 recipesVM.recipes.append(Recipe(name: name, image: imageString, description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: ""))
+                 
+             }
+            
+          
+            
         }
         
         
         
-        let recipe: [String : Any] = [
-            "name": name,
-            "image": imageString,
-            "description": description,
-            "ingredients": ingredients,
-            "directions": directions,
-            "category": selectedCategory.rawValue,
-            "datePublish": datePublish,
-            "url": ""
-            ]
         
-       
-        
-                  
-        let db = Firestore.firestore().collection("users").document(uid).collection("Recipes")
-        
-        
-        db.addDocument(data: recipe)
-        
-        recipesVM.recipes.append(Recipe(name: name, image: imageString, description: description, ingredients: ingredients, directions: directions, category: selectedCategory.rawValue, datePublish: datePublish, url: ""))
+     
         
         
       }
